@@ -11,6 +11,7 @@
     "dev": "vite dev",
     "package": "vite package",
     "postinstall": "npm run bootstrap",
+    "prepare": "husky install",
     "preview": "vite preview",
     "start": "vite dev"
   },
@@ -18,6 +19,8 @@
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "degit": "^2.8.4",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "shelljs": "^0.8.5",
     "svelte": "^3.44.0",
