@@ -1,6 +1,6 @@
 # sveltekit-wphp
 
-A SvelteKit app to mock a WordPress login page, useful as a honeypot to monitor login attempts to your site.
+A SvelteKit template to mock a WordPress login page, useful as a honeypot to monitor login attempts to your site.
 
 ## Installation
 
@@ -9,6 +9,8 @@ npx degit idleberg/sveltekit-wphp
 cd sveltekit-wphp
 pnpm install
 ```
+
+:warning: Alternatively, you can clone the repository rather than using `degit` and repeat the following steps. However, it's not a recommended practice!
 
 ## Usage
 
