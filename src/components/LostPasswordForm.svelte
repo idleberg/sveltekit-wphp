@@ -7,20 +7,21 @@
     let userLogin: string = '';
 
     onMount(() => {
-        passwordInput.focus();
+      // Mimicking default WordPress behaviour
+      passwordInput.focus();
     });
 
     performance.getEntriesByType('navigation')
 
     const submitHandler = () => {
-        setTimeout(() => {
-            hasError = true
-        }, import.meta.env.VITE_CONNECTION_TIMEOUT || 2000)
+      setTimeout(() => {
+          hasError = true
+      }, import.meta.env.VITE_CONNECTION_TIMEOUT || 2000)
 
-        callback({
-          source: 'lostpasswordform',
-          login: userLogin
-        });
+      callback({
+        source: 'lostpasswordform',
+        login: userLogin
+      });
     };
 </script>
 

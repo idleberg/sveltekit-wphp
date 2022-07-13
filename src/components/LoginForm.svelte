@@ -8,20 +8,21 @@
   let userPass: string = '';
 
   onMount(() => {
+    // Mimicking default WordPress behaviour
     loginInput.focus();
     loginInput.select();
   });
 
   const submitHandler = async () => {
-      setTimeout(() => {
-          hasError = true
-      }, import.meta.env.VITE_CONNECTION_TIMEOUT || 2000);
+    setTimeout(() => {
+        hasError = true
+    }, import.meta.env.VITE_CONNECTION_TIMEOUT || 2000);
 
-      callback({
-        form: 'loginform',
-        user: userLogin,
-        password: userPass
-      });
+    callback({
+      form: 'loginform',
+      user: userLogin,
+      password: userPass
+    });
   };
 </script>
 

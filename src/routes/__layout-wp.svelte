@@ -10,6 +10,7 @@
   let isLogin = true;
 
   onMount(async () => {
+    // Mimicking default WordPress behaviour
     document.body.className = document.body.className.replace("no-js", "js");
 
     const searchParams = new URLSearchParams(window.location.search);
