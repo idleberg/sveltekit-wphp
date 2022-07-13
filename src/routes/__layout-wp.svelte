@@ -4,8 +4,8 @@
 
 <script lang="ts">
   import { onMount } from 'svelte';
-  import LoginForm from '../components/LoginForm.svelte';
-  import LostPasswordForm from '../components/LostPasswordForm.svelte';
+  import LoginForm from '$components/LoginForm.svelte';
+  import LostPasswordForm from '$components/LostPasswordForm.svelte';
 
   let isLogin = true;
 
