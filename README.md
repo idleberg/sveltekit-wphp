@@ -34,7 +34,7 @@ Builds the project. By default, the `@sveltekit/adapter-auto`is used. Your proje
 
 ### Routes
 
-This template only has routes configured for the WordPress login page: `wp-admin` and `wp-login.php`. The default route will produce a 404.
+This template only has routes for the WordPress login page configured: `wp-admin` and `wp-login.php`, the former will be used as the default route for both, development server and preview.
 
 ## License
 
