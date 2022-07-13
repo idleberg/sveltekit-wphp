@@ -10,6 +10,8 @@ cd sveltekit-wphp
 pnpm install
 ```
 
+:warning: Alternatively, you can clone the repository rather than using `degit` and repeat the following steps. However, it's not a recommended practice!
+
 ## Usage
 
 You will want to edit `src/lib/callback.ts` according to your needs. By default, it logs to the browser console.
