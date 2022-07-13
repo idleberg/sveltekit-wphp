@@ -18,6 +18,8 @@ You will want to edit `src/lib/callback.ts` according to your needs. By default,
 
 ### Scripts
 
+Listed below are the most important scripts for developers, but there are more to be found in [`package.json`](package.json).
+
 #### `bootstrap`
 
 Downloads WordPress and copies required files to the `static` folder. This runs automatically right after `pnpm install`.
