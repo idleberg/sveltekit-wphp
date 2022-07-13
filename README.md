@@ -1,6 +1,6 @@
 # sveltekit-wphp
 
-A SvelteKit app to mock a WordPress login page, useful as a honeypot to monitor login attempts to your site.
+A SvelteKit template to mock a WordPress login page, useful as a honeypot to monitor login attempts to your site.
 
 ## Installation
 
