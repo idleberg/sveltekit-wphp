@@ -8,6 +8,7 @@
   import LostPasswordForm from '$components/LostPasswordForm.svelte';
 
   let isLogin = true;
+  let isLoading = true;
 
   onMount(async () => {
     // Mimicking default WordPress behaviour
@@ -17,20 +18,25 @@
     isLogin = searchParams.has('action') && searchParams.get('action') === 'lostpassword'
       ? false
       : true;
+
+    // Prevents layout shifts
+    isLoading = false;
   });
 </script>
 
-<div id="login">
-  <h1><a href="https://wordpress.org/">Powered by WordPress</a></h1>
+{#if !isLoading}
+  <div id="login">
+    <h1><a href="https://wordpress.org/">Powered by WordPress</a></h1>
 
-  {#if isLogin}
-    <LoginForm />
-  {:else}
-    <LostPasswordForm />
-  {/if}
+    {#if isLogin}
+      <LoginForm />
+    {:else}
+      <LostPasswordForm />
+    {/if}
 
-  <p id="backtoblog">
-    <a href="/">&larr; Go to { import.meta.env.VITE_SITE_NAME }</a>
-  </p>
-</div>
-<div class="clear" />
+    <p id="backtoblog">
+      <a href="/">&larr; Go to { import.meta.env.VITE_SITE_NAME }</a>
+    </p>
+  </div>
+  <div class="clear" />
+{/if}

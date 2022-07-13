@@ -2,7 +2,11 @@
     import { onMount } from 'svelte';
     import { callback } from '$lib/callback';
 
-    export let hasError: boolean = false;
+    import { randomResponse } from '$lib/util';
+
+    let hasError = false;
+    let errorMessage = '';
+
     let passwordInput: HTMLInputElement;
     let userLogin: string = '';
 
@@ -11,12 +15,16 @@
       passwordInput.focus();
     });
 
-    performance.getEntriesByType('navigation')
-
     const submitHandler = () => {
       setTimeout(() => {
-          hasError = true
-      }, import.meta.env.VITE_CONNECTION_TIMEOUT || 2000)
+        if (userLogin.length) {
+          errorMessage = 'There is no account with that username or email address.'
+        } else {
+          errorMessage = 'Please enter a username or email address.'
+        }
+
+        hasError = true;
+      }, randomResponse())
 
       callback({
         form: '#lostpasswordform',
@@ -36,8 +44,7 @@
 
 {#if hasError}
     <div id="login_error">
-        <strong>Error</strong>: There is no account with that username or email address.
-        <br>
+      <strong>Error</strong>: {errorMessage}<br />
     </div>
 {/if}
 
@@ -50,7 +57,7 @@
     <input type="hidden" name="redirect_to" value="">
 
     <p class="submit">
-        <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Get New Password">
+      <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Get New Password">
     </p>
 </form>
 

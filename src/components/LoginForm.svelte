@@ -1,8 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { callback } from '$lib/callback';
+  import { randomResponse } from '$lib/util';
 
-  export let hasError: boolean = false;
+  let hasError = false;
+  let errorMessage = '';
+
   let loginInput: HTMLInputElement;
   let userLogin: string = '';
   let userPass: string = '';
@@ -15,8 +18,23 @@
 
   const submitHandler = async () => {
     setTimeout(() => {
-        hasError = true
-    }, import.meta.env.VITE_CONNECTION_TIMEOUT || 2000);
+
+      if (!userLogin.length || !userPass.length) {
+        errorMessage = '';
+
+        if (!userLogin.length) {
+          errorMessage += '<strong>Error</strong>: The username field is empty.<br />';
+        }
+
+        if (!userPass.length) {
+          errorMessage += '<strong>Error</strong>: The password field is empty.<br />';
+        }
+      } else {
+        errorMessage = `<strong>Error</strong>: The username <strong>${userLogin}</strong> is not registered on this site. If you are unsure of your username, try your email address instead.<br />`;
+      }
+
+      hasError = true;
+    }, randomResponse());
 
     callback({
       form: '#loginform',
@@ -35,8 +53,7 @@
 
 {#if hasError}
     <div id="login_error">
-        <strong>Error</strong>: The username <strong>{ userLogin }</strong> is not registered on this site. If you are unsure of your username, try your email address instead.
-        <br />
+      {@html errorMessage}
     </div>
 {/if}
 
