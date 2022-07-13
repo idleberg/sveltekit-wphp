@@ -32,6 +32,10 @@ Starts the development server with hot module reloading
 
 Builds the project. By default, the `@sveltekit/adapter-auto`is used. Your project might need a different SvelteKit adapter.
 
+### Routes
+
+This template only has routes configured for the WordPress login page: `wp-admin` and `wp-login.php`. The default route will produce a 404.
+
 ## License
 
 This work is licensed under [The MIT License](LICENSE)
