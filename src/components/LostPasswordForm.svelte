@@ -19,8 +19,8 @@
       }, import.meta.env.VITE_CONNECTION_TIMEOUT || 2000)
 
       callback({
-        source: 'lostpasswordform',
-        login: userLogin
+        form: '#lostpasswordform',
+        user: userLogin
       });
     };
 </script>

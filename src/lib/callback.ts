@@ -1,3 +1,3 @@
-export function callback(payload: PayloadObject): void {
+export function callback(payload: CallbackPayload): void {
     console.log(payload);
 };

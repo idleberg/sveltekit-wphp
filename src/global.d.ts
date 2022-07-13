@@ -1,6 +1,6 @@
 /// <reference types="@sveltejs/kit" />
-interface PayloadObject {
+interface CallbackPayload {
     form: string;
-    login: string;
+    user: string;
     password?: string;
 }

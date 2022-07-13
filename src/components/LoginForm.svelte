@@ -19,7 +19,7 @@
     }, import.meta.env.VITE_CONNECTION_TIMEOUT || 2000);
 
     callback({
-      form: 'loginform',
+      form: '#loginform',
       user: userLogin,
       password: userPass
     });
