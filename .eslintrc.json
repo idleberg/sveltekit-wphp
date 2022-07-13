@@ -1,0 +1,52 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:json/recommended"
+  ],
+  "globals": {
+    "inIframe": true,
+    "process": true,
+    "supporterUrlPostfix": true
+  },
+  "ignorePatterns": [
+    "*.d.ts"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.svelte"
+      ],
+      "processor": "svelte3/svelte3"
+    },
+    {
+      "files": [
+        "tsconfig.json"
+      ],
+      "rules": {
+        "json/*": [
+          "error",
+          "allowComments"
+        ]
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "svelte3",
+    "@typescript-eslint"
+  ],
+  "settings": {
+    "svelte3/typescript": true
+  }
+}
