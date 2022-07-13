@@ -14,6 +14,20 @@ pnpm install
 
 You will want to edit `src/lib/callback.ts` according to your needs. By default, it logs to the browser console.
 
+### Scripts
+
+#### `bootstrap`
+
+Downloads WordPress and copies required files to the `static` folder. This runs automatically right after `pnpm install`.
+
+#### `dev`
+
+Starts the development server with hot module reloading
+
+#### `build`
+
+Builds the project. By default, the `@sveltekit/adapter-auto`is used. Your project might need a different SvelteKit adapter.
+
 ## License
 
 This work is licensed under [The MIT License](LICENSE)
