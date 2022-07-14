@@ -9,6 +9,8 @@ node_modules
 
 /.wordpress
 /static
+!/static/.nojekyll
+
 
 .eslintcache
 .stylelintcache
