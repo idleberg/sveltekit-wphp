@@ -15,7 +15,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: dev ? '' : `/sveltekit-wphp`
+			base: dev && !process.env.GITHUB_WORKFLOW ? '' : `/sveltekit-wphp`
 		},
 		prerender: {
 			default: true

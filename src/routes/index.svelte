@@ -3,4 +3,10 @@
 	export const prerender = true;
 </script>
 
-<a href="wp-admin/">Go to WordPress admin</a>
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
+<h1>sveltekit-wphp</h1>
+
+<p><a href={`${base}/wp-admin`}>Go to WordPress admin</a>.</p>
