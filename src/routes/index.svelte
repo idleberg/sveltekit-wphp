@@ -13,5 +13,5 @@
 
 <h1>Hello world!</h1>
 
-<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing</p>
+<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
 <p><a href={`${base}/wp-admin`}>Go to WordPress admin</a>.</p>
