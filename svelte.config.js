@@ -14,7 +14,6 @@ const config = {
 		adapter: adapter({
 			fallback: '404.html'
 		}),
-		appDir: `sveltekit-wphp/_app`,
 		paths: {
 			base: dev ? '' : `/sveltekit-wphp`
 		},
