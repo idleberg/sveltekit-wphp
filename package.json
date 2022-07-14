@@ -28,6 +28,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
+    "prettier-plugin-svelte": "^2.7.0",
     "shelljs": "^0.8.5",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.6",
@@ -37,7 +38,7 @@
     "vite": "^3.0.0"
   },
   "lint-staged": {
-    "*.svelte": "prettier --write",
+    "*.svelte": "prettier --write --plugin-search-dir=. ./src/**/*.svelte",
     "*.(ts|js)": [
       "eslint --cache --fix",
       "prettier --write"
