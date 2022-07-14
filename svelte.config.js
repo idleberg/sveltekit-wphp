@@ -2,7 +2,6 @@ import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import fs from 'node:fs';
 
-const pkg = fs.readFileSync('./package.json', 'utf8');
 const dev = process.env.NODE_ENV === 'development';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -15,9 +14,9 @@ const config = {
 		adapter: adapter({
 			fallback: '404.html'
 		}),
-		appDir: `${pkg.name}/_app`,
+		appDir: `sveltekit-wphp/_app`,
 		paths: {
-			base: dev ? '' : `/${pkg.name}`
+			base: dev ? '' : `/sveltekit-wphp`
 		},
 		prerender: {
 			default: true
