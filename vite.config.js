@@ -5,7 +5,7 @@ const defaultRoute = '/wp-admin';
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	base: 'sveltekit-wphp',
+	base: '/sveltekit-wphp',
 	plugins: [sveltekit()],
 	resolve: {
 		alias: {
