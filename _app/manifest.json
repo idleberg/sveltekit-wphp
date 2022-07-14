@@ -1,0 +1,65 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "immutable/start-24f0ecd7.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-a8e38ae1.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/runtime/components/layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/__layout-wp.svelte",
+      "src/routes/wp-admin@wp.svelte",
+      "src/routes/wp-login.php@wp.svelte"
+    ]
+  },
+  ".svelte-kit/runtime/components/layout.svelte": {
+    "file": "immutable/layout.svelte-9c2af30f.js",
+    "src": ".svelte-kit/runtime/components/layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a8e38ae1.js"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "immutable/error.svelte-1fc91c63.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a8e38ae1.js"
+    ]
+  },
+  "src/routes/__layout-wp.svelte": {
+    "file": "immutable/pages/__layout-wp.svelte-e49eed6a.js",
+    "src": "src/routes/__layout-wp.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a8e38ae1.js"
+    ]
+  },
+  "src/routes/wp-admin@wp.svelte": {
+    "file": "immutable/pages/wp-admin@wp.svelte-7f6b5da8.js",
+    "src": "src/routes/wp-admin@wp.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a8e38ae1.js"
+    ]
+  },
+  "src/routes/wp-login.php@wp.svelte": {
+    "file": "immutable/pages/wp-login.php@wp.svelte-b118b1f2.js",
+    "src": "src/routes/wp-login.php@wp.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a8e38ae1.js"
+    ]
+  },
+  "_index-a8e38ae1.js": {
+    "file": "immutable/chunks/index-a8e38ae1.js"
+  }
+}
