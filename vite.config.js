@@ -1,8 +1,6 @@
 import { resolve } from 'node:path';
 import { sveltekit } from '@sveltejs/kit/vite';
 
-const defaultRoute = '/wp-admin';
-
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [sveltekit()],
@@ -10,12 +8,6 @@ const config = {
 		alias: {
 			$components: resolve('./src/components')
 		}
-	},
-	server: {
-		open: defaultRoute
-	},
-	preview: {
-		open: defaultRoute
 	}
 };
 

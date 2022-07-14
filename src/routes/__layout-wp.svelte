@@ -42,7 +42,7 @@
 		{/if}
 
 		<p id="backtoblog">
-			<a href={base}>&larr; Go to {import.meta.env.VITE_SITE_NAME}</a>
+			<a href={base || '/'}>&larr; Go to {import.meta.env.VITE_SITE_NAME}</a>
 		</p>
 	</div>
 	<div class="clear" />
