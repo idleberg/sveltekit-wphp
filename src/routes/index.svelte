@@ -7,6 +7,10 @@
 	import { base } from '$app/paths';
 </script>
 
+<svelte:head>
+	<title>Hello World &lsaquo; {import.meta.env.VITE_SITE_NAME} — WordPress</title>
+</svelte:head>
+
 <h1>Hello world!</h1>
 
 <p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing</p>
