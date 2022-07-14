@@ -23,11 +23,11 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" id="dashicons-css" href={`wp-includes/css/dashicons.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
-  <link rel="stylesheet" id="buttons-css" href={`wp-includes/css/buttons.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
-  <link rel="stylesheet" id="forms-css" href={`wp-admin/css/forms.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
-  <link rel="stylesheet" id="l10n-css" href={`wp-admin/css/l10n.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
-  <link rel="stylesheet" id="login-css" href={`wp-admin/css/login.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
+	<link rel="stylesheet" id="dashicons-css" href={`wp-includes/css/dashicons.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
+	<link rel="stylesheet" id="buttons-css" href={`wp-includes/css/buttons.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
+	<link rel="stylesheet" id="forms-css" href={`wp-admin/css/forms.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
+	<link rel="stylesheet" id="l10n-css" href={`wp-admin/css/l10n.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
+	<link rel="stylesheet" id="login-css" href={`wp-admin/css/login.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
 </svelte:head>
 
 {#if !isLoading}
