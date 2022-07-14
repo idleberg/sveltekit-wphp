@@ -45,7 +45,7 @@
 
 <svelte:head>
 	<title>Log In &lsaquo; {import.meta.env.VITE_SITE_NAME} — WordPress</title>
-	{#if import.meta.env.VITE_HIDE_ROBOTS}
+	{#if import.meta.env.VITE_NO_INDEX}
 		<meta name="robots" content="max-image-preview:large, noindex, noarchive" />
 	{/if}
 </svelte:head>
