@@ -3,6 +3,7 @@
 </script>
 
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
 	import LoginForm from '$components/LoginForm.svelte';
 	import LostPasswordForm from '$components/LostPasswordForm.svelte';
@@ -41,7 +42,7 @@
 		{/if}
 
 		<p id="backtoblog">
-			<a href="/">&larr; Go to {import.meta.env.VITE_SITE_NAME}</a>
+			<a href={base}>&larr; Go to {import.meta.env.VITE_SITE_NAME}</a>
 		</p>
 	</div>
 	<div class="clear" />
