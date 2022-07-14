@@ -15,8 +15,8 @@ const config = {
 		adapter: adapter({
 			fallback: '404.html'
 		}),
+		appDir: `${pkg.name}/_app`,
 		paths: {
-			appDir: `${pkg.name}/_app`,
 			base: dev ? '' : `/${pkg.name}`
 		},
 		prerender: {
