@@ -11,6 +11,9 @@ node_modules
 /static
 !/static/.nojekyll
 
-
 .eslintcache
 .stylelintcache
+
+.pnpm-debug.log
+package-lock.json
+yarn.locl
