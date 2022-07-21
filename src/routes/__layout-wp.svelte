@@ -24,6 +24,7 @@
 </script>
 
 <svelte:head>
+	<!-- Make it look like WordPress link-tags -->
 	<link rel="stylesheet" id="dashicons-css" href={`wp-includes/css/dashicons.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
 	<link rel="stylesheet" id="buttons-css" href={`wp-includes/css/buttons.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
 	<link rel="stylesheet" id="forms-css" href={`wp-admin/css/forms.min.css?ver=${import.meta.env.VITE_WORDPRESS_VERSION}`} type="text/css" media="all" />
