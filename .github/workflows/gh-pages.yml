@@ -34,7 +34,7 @@ jobs:
       - name: Build
         run: pnpm run build
         env:
-          VITE_SITE_NAME: SvelteKit WordPress Honeypot
+          VITE_SITE_NAME: Demo Page
           VITE_WORDPRESS_VERSION: 6.0.0
           VITE_CONNECTION_TIMEOUT: 2000
 
