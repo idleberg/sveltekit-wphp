@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { callback } from '$lib/callback';
 	import { randomResponse } from '$lib/util';
+	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	let hasError = false;
 	let errorMessage = '';
@@ -56,7 +57,7 @@
 	</div>
 {/if}
 
-<form name="loginform" id="loginform" action="wp-login.php" method="post" class:shake={hasError} on:submit|preventDefault={submitHandler}>
+<form name="loginform" id="loginform" action="{$page.url.origin}/wp-login.php" method="post" class:shake={hasError} on:submit|preventDefault={submitHandler}>
 	<p>
 		<label for="user_login">Username or Email Address</label>
 		<input type="text" name="log" id="user_login" class="input" bind:value={userLogin} size="20" autocapitalize="off" bind:this={loginInput} />
@@ -76,7 +77,7 @@
 
 	<p class="submit">
 		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Log In" />
-		<input type="hidden" name="redirect_to" value="wp-admin/" />
+		<input type="hidden" name="redirect_to" value="{$page.url.origin}/wp-admin/" />
 		<input type="hidden" name="testcookie" value="1" />
 	</p>
 </form>

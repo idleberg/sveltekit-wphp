@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { callback } from '$lib/callback';
-
+	import { onMount } from 'svelte';
 	import { randomResponse } from '$lib/util';
+	import { page } from '$app/stores';
 
 	let hasError = false;
 	let errorMessage = '';
@@ -48,7 +48,7 @@
 	</div>
 {/if}
 
-<form name="lostpasswordform" id="lostpasswordform" action="wp-login.php?action=lostpassword" method="post" class:shake={hasError} on:submit|preventDefault={submitHandler}>
+<form name="lostpasswordform" id="lostpasswordform" action="{$page.url.origin}/wp-login.php?action=lostpassword" method="post" class:shake={hasError} on:submit|preventDefault={submitHandler}>
 	<p>
 		<label for="user_login">Username or Email Address</label>
 		<input type="text" name="user_login" id="user_login" class="input" bind:value={userLogin} size="20" autocapitalize="off" bind:this={passwordInput} />
