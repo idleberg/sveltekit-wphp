@@ -4,8 +4,9 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
-	let hasError = false;
-	let errorMessage = '';
+	let hasError: boolean = false;
+	let errorMessage: string = '';
+	let hidePassword: boolean = true;
 
 	let loginInput: HTMLInputElement;
 	let userLogin: string = '';
@@ -16,6 +17,10 @@
 		loginInput.focus();
 		loginInput.select();
 	});
+
+	const togglePasswordVisibility = () => {
+		hidePassword = !hidePassword;
+	};
 
 	const submitHandler = async () => {
 		setTimeout(() => {
@@ -66,8 +71,13 @@
 	<div class="user-pass-wrap">
 		<label for="user_pass">Password</label>
 		<div class="wp-pwd">
-			<input type="password" name="pwd" id="user_pass" class="input password-input" bind:value={userPass} size="20" />
-			<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="Show password">
+			{#if hidePassword}
+				<input type="password" name="pwd" id="user_pass" class="input password-input" bind:value={userPass} size="20" />
+			{:else}
+				<input type="text" name="pwd" id="user_pass" class="input password-input" bind:value={userPass} size="20" />
+			{/if}
+
+			<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label={hidePassword ? 'Show password' : 'Hide password'} on:click={togglePasswordVisibility}>
 				<span class="dashicons dashicons-visibility" aria-hidden="true" />
 			</button>
 		</div>
