@@ -77,8 +77,8 @@
 				<input type="text" name="pwd" id="user_pass" class="input password-input" bind:value={userPass} size="20" />
 			{/if}
 
-			<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label={hidePassword ? 'Show password' : 'Hide password'} on:click={togglePasswordVisibility}>
-				<span class="dashicons dashicons-visibility" aria-hidden="true" />
+			<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="{hidePassword ? 'Show' : 'Hide'} password" on:click={togglePasswordVisibility}>
+				<span class="dashicons dashicons-{hidePassword ? 'visibility' : 'hidden'}" aria-hidden="true" />
 			</button>
 		</div>
 	</div>
