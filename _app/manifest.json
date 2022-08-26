@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-8a2513a5.js",
+    "file": "immutable/start-bda9f5a5.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -35,7 +35,7 @@
     ]
   },
   "src/routes/__layout-wp.svelte": {
-    "file": "immutable/pages/__layout-wp.svelte-afbb2336.js",
+    "file": "immutable/pages/__layout-wp.svelte-acded903.js",
     "src": "src/routes/__layout-wp.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
