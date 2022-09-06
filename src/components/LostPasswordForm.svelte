@@ -28,7 +28,8 @@
 
 		callback({
 			form: '#lostpasswordform',
-			user: userLogin
+			user: userLogin,
+			timestamp: Date.now()
 		});
 	};
 </script>

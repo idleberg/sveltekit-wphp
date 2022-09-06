@@ -44,7 +44,8 @@
 		callback({
 			form: '#loginform',
 			user: userLogin,
-			password: userPass
+			password: userPass,
+			timestamp: Date.now()
 		});
 	};
 </script>
