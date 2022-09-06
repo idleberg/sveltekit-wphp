@@ -1,3 +1,3 @@
 export function callback(payload: CallbackPayload): void {
-    console.log(payload);
-};
+	console.table(payload);
+}
