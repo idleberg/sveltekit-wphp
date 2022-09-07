@@ -17,6 +17,7 @@
 
 		const searchParams = new URLSearchParams(window.location.search);
 		isLogin = searchParams.has('action') && searchParams.get('action') === 'lostpassword' ? false : true;
+		console.log(isLogin);
 
 		// Prevents layout shifts
 		isLoading = false;

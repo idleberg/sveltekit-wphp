@@ -13,9 +13,6 @@ const config = {
 		}),
 		paths: {
 			base: process.env.GITHUB_WORKFLOW ? '/sveltekit-wphp' : undefined
-		},
-		prerender: {
-			default: true
 		}
 	}
 };

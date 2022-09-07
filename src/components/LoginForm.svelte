@@ -94,5 +94,5 @@
 </form>
 
 <p id="nav">
-	<a sveltekit:reload href="wp-login.php?action=lostpassword">Lost your password?</a>
+	<a data-sveltekit-reload href="wp-login.php?action=lostpassword">Lost your password?</a>
 </p>

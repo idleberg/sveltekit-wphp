@@ -63,5 +63,5 @@
 </form>
 
 <p id="nav">
-	<a sveltekit:reload href="wp-login.php">Log in</a>
+	<a data-sveltekit-reload href="wp-login.php">Log in</a>
 </p>
