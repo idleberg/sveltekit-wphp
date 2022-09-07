@@ -1,1 +1,3 @@
-<!-- Just like honey -->
+<script>
+	export const prerender = true;
+</script>
