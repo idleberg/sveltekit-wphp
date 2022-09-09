@@ -36,7 +36,7 @@
 
 <svelte:head>
 	<title>Lost Password &lsaquo; {import.meta.env.VITE_SITE_NAME ? `${import.meta.env.VITE_SITE_NAME} — WordPress` : 'WordPress'}</title>
-	{#if import.meta.env.VITE_NO_INDEX}
+	{#if import.meta.env.VITE_HIDE_ROBOTS}
 		<meta name="robots" content="max-image-preview:large, noindex, noarchive" />
 	{/if}
 </svelte:head>
