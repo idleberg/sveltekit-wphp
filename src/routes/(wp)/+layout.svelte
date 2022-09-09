@@ -9,7 +9,7 @@
 
 	onMount(async () => {
 		// Mimicking default WordPress behaviour
-		document.body.className = document.body.className.replace('no-js', 'js');
+		document.body.classList.add('login', 'js', 'login-action-login', 'wp-core-ui', 'locale-en-us');
 
 		const searchParams = new URLSearchParams(window.location.search);
 		isLogin = searchParams.has('action') && searchParams.get('action') === 'lostpassword' ? false : true;
