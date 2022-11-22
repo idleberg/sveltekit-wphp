@@ -2,8 +2,21 @@ name: gh-pages
 
 on:
   push:
-    branches:
-      - main
+    paths:
+    - 'src/**'
+    - 'tools/**'
+    - 'package.json'
+    - 'pnpm-lock.yaml'
+    - 'svelte.config.js'
+    - 'vite.config.js'
+  pull_request:
+      paths:
+      - 'src/**'
+      - 'tools/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'svelte.config.js'
+      - 'vite.config.js'
 
 jobs:
   deploy:
