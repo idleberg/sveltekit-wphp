@@ -63,7 +63,7 @@
 	</div>
 {/if}
 
-<form name="loginform" id="loginform" action="{$page.url.origin}/wp-login.php" method="post" class:shake={hasError} on:submit|preventDefault={submitHandler}>
+<form name="loginform" id="loginform" action="{$page.url.origin}/wp-login.php" method="post" class:shake={hasError} netlify-honeypot="bot-field" data-netlify="true" on:submit|preventDefault={submitHandler}>
 	<p>
 		<label for="user_login">Username or Email Address</label>
 		<input type="text" name="log" id="user_login" class="input" bind:value={userLogin} size="20" autocapitalize="off" bind:this={loginInput} />

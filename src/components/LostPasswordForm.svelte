@@ -49,7 +49,7 @@
 	</div>
 {/if}
 
-<form name="lostpasswordform" id="lostpasswordform" action="{$page.url.origin}/wp-login.php?action=lostpassword" method="post" class:shake={hasError} on:submit|preventDefault={submitHandler}>
+<form name="lostpasswordform" id="lostpasswordform" action="{$page.url.origin}/wp-login.php?action=lostpassword" method="post" class:shake={hasError} netlify-honeypot="bot-field" data-netlify="true" on:submit|preventDefault={submitHandler}>
 	<p>
 		<label for="user_login">Username or Email Address</label>
 		<input type="text" name="user_login" id="user_login" class="input" bind:value={userLogin} size="20" autocapitalize="off" bind:this={passwordInput} />
