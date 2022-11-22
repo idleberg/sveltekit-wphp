@@ -1,6 +1,6 @@
 import shell from 'shelljs';
 
-shell.exec('npx degit wordpress/wordpress .wordpress || echo "WordPress folder exists"')
+shell.exec('npx degit wordpress/wordpress#5.9.5 .wordpress || echo "WordPress folder exists"')
 
 shell.cp('.wordpress/wp-includes/images/w-logo-blue-white-bg.png', 'static/favicon.png');
 
