@@ -3,6 +3,7 @@ name: gh-pages
 on:
   push:
     paths:
+    - '.github/**'
     - 'src/**'
     - 'tools/**'
     - 'package.json'
@@ -11,6 +12,7 @@ on:
     - 'vite.config.js'
   pull_request:
       paths:
+      - '.github/**'
       - 'src/**'
       - 'tools/**'
       - 'package.json'
