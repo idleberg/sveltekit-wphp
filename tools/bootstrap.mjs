@@ -1,18 +1,30 @@
+import { dirname, resolve } from 'node:path';
 import shell from 'shelljs';
 
-shell.exec('npx degit --force wordpress/wordpress#5.9.5 .wordpress')
+const sourcePath = resolve(process.cwd(), 'node_modules', '.wordpress');
+const destinationPath = resolve(process.cwd(), 'static');
 
-shell.cp('.wordpress/wp-includes/images/w-logo-blue-white-bg.png', 'static/favicon.png');
+const files = [
+  {
+    src: 'wp-includes/images/w-logo-blue-white-bg.png',
+    dest: 'favicon.png'
+  },
+  'wp-includes/css/dashicons.min.css',
+  'wp-includes/css/buttons.min.css',
+  'wp-admin/css/forms.min.css',
+  'wp-admin/css/l10n.min.css',
+  'wp-admin/css/login.min.css',
+  'wp-admin/images/w-logo-blue.png',
+  'wp-admin/images/wordpress-logo.svg'
+];
 
-shell.mkdir('-p', 'static/wp-includes/css');
-shell.cp('.wordpress/wp-includes/css/dashicons.min.css', 'static/wp-includes/css/dashicons.min.css');
-shell.cp('.wordpress/wp-includes/css/buttons.min.css', 'static/wp-includes/css/buttons.min.css');
+files.map(file => {
+  const src = resolve(sourcePath, file.src || file);
+  const dest = resolve(destinationPath, file.dest || file);
+  const parentDir = dirname(dest);
 
-shell.mkdir('-p', 'static/wp-admin/css');
-shell.cp('.wordpress/wp-admin/css/forms.min.css', 'static/wp-admin/css/forms.min.css');
-shell.cp('.wordpress/wp-admin/css/l10n.min.css', 'static/wp-admin/css/l10n.min.css');
-shell.cp('.wordpress/wp-admin/css/login.min.css', 'static/wp-admin/css/login.min.css');
-
-shell.mkdir('-p', 'static/wp-admin/images');
-shell.cp('.wordpress/wp-admin/images/w-logo-blue.png', 'static/wp-admin/images/w-logo-blue.png');
-shell.cp('.wordpress/wp-admin/images/wordpress-logo.svg', 'static/wp-admin/images/wordpress-logo.svg');
+  console.time(`> create static/${file.dest || file}`);
+    shell.mkdir(`-p`, parentDir);
+    shell.cp(src, dest);
+  console.timeEnd(`> create static/${file.dest || file}`);
+});
