@@ -16,6 +16,7 @@
     "start": "vite dev"
   },
   "dependencies": {
+    "degit": "^2.8.4",
     "shelljs": "^0.8.5"
   },
   "devDependencies": {
@@ -24,7 +25,6 @@
     "@tsconfig/svelte": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
-    "degit": "^2.8.4",
     "eslint": "^8.28.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-svelte3": "^4.0.0",

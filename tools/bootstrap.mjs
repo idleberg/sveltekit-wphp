@@ -18,13 +18,19 @@ const files = [
   'wp-admin/images/wordpress-logo.svg'
 ];
 
-files.map(file => {
-  const src = resolve(sourcePath, file.src || file);
-  const dest = resolve(destinationPath, file.dest || file);
-  const parentDir = dirname(dest);
+main();
 
-  console.time(`> create static/${file.dest || file}`);
-    shell.mkdir(`-p`, parentDir);
-    shell.cp(src, dest);
-  console.timeEnd(`> create static/${file.dest || file}`);
-});
+function main() {
+  shell.exec(`npx degit --force wordpress/wordpress#5.9.5 ${sourcePath}`);
+
+  files.map(file => {
+    const src = resolve(sourcePath, file.src || file);
+    const dest = resolve(destinationPath, file.dest || file);
+    const parentDir = dirname(dest);
+
+    console.time(`> create static/${file.dest || file}`);
+      shell.mkdir(`-p`, parentDir);
+      shell.cp(src, dest);
+    console.timeEnd(`> create static/${file.dest || file}`);
+  });
+}
