@@ -15,6 +15,9 @@
     "preview": "vite preview",
     "start": "vite dev"
   },
+  "dependencies": {
+    "shelljs": "^0.8.5"
+  },
   "devDependencies": {
     "@sveltejs/adapter-static": "1.0.0-next.48",
     "@sveltejs/kit": "1.0.0-next.557",
@@ -29,7 +32,6 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.8.1",
-    "shelljs": "^0.8.5",
     "svelte": "^3.53.1",
     "svelte-check": "^2.9.2",
     "svelte-preprocess": "^4.10.7",
