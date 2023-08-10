@@ -21,7 +21,7 @@ const files = [
 main();
 
 function main() {
-  shell.exec(`npx degit --force wordpress/wordpress#5.9.5 ${sourcePath}`);
+  shell.exec(`npx degit --force wordpress/wordpress#5.9.7 ${sourcePath}`);
 
   files.map(file => {
     const src = resolve(sourcePath, file.src || file);
